@@ -1,4 +1,5 @@
-Operating_Systems
+# Operating_Systems
+
 Operating Systems project on virtual OS Manager
 
 Title Page • Project Title: Virtual OS Manager • Ashok Mundepi / Team Members – Taniya, Anshika Chauhan, Salil Bhardwaj • Graphic Era Hill University, Department of Computer Science and Technology. • To - Preeti Badhani Mam
@@ -7,13 +8,20 @@ Chapter 1. Abstract 1.1 A brief overview of the project. The Virtual OS Manager 
 
 1.2 Key objectives, technologies used, and results. The main objectives of the Virtual OS Manager are:
 
-Simplified OS Virtualization: o Provide an easy-to-use interface for launching and managing virtual OS instances (e.g., Windows, Linux).
-Multi-OS Support: o Support various operating systems through a common virtualization backend (such as VirtualBox, KVM, or Docker).
-Resource Management: o Enable configuration and monitoring of CPU, RAM, and storage allocation per virtual machine.
-Automation: o Automate routine tasks like startup/shutdown, snapshot management, and resource scaling.
-User Access Control (Optional): o Allow multi-user access with role-based permission settings.
-Efficiency: o Minimize host system overhead while running multiple virtual OS environments.
-Portability (Optional Goal): o Ensure cross-platform compatibility or container-based portability. 💻 Technologies Used The project utilizes a combination of programming tools, virtualization platforms, and supporting libraries: 🧠 Frontend / UI: • Electron / Tkinter / Web (HTML+JS) – For GUI-based desktop/web interface. ⚙️ Backend: • Python / Java / Node.js – Core application logic, process handling. • Shell scripting / PowerShell – For low-level OS commands. 🖥️ Virtualization Layer: • VirtualBox SDK or libvirt/KVM – For managing virtual machines. • Docker (if using containers instead of full VMs). 📊 Monitoring & Logs: • psutil (Python) – For system and process monitoring. • Log4j / Logging module – For application logs. 📦 Database (if needed): • SQLite / MySQL – For storing configuration, user data, VM metadata.
+1 Simplified OS Virtualization: o Provide an easy-to-use interface for launching and managing virtual OS instances (e.g., Windows, Linux).
+
+2 Multi-OS Support: o Support various operating systems through a common virtualization backend (such as VirtualBox, KVM, or Docker).
+
+3 Resource Management: o Enable configuration and monitoring of CPU, RAM, and storage allocation per virtual machine.
+
+4 Automation: o Automate routine tasks like startup/shutdown, snapshot management, and resource scaling.
+
+5 User Access Control (Optional): o Allow multi-user access with role-based permission settings.
+
+6 Efficiency: o Minimize host system overhead while running multiple virtual OS environments.
+
+7 Portability (Optional Goal): o Ensure cross-platform compatibility or container-based portability. 💻 Technologies Used The project utilizes a combination of programming tools, virtualization platforms, and supporting libraries: 🧠 Frontend / UI: • Electron / Tkinter / Web (HTML+JS) – For GUI-based desktop/web interface. ⚙️ Backend: • Python / Java / Node.js – Core application logic, process handling. • Shell scripting / PowerShell – For low-level OS commands. 🖥️ Virtualization Layer: • VirtualBox SDK or libvirt/KVM – For managing virtual machines. • Docker (if using containers instead of full VMs). 📊 Monitoring & Logs: • psutil (Python) – For system and process monitoring. • Log4j / Logging module – For application logs. 📦 Database (if needed): • SQLite / MySQL – For storing configuration, user data, VM metadata.
+
 Chapter 3. Introduction 3.1 Background of Operating Systems and Virtualization. 🧠 1. Background of Operating Systems and Virtualization 🔹 What is an Operating System? An Operating System (OS) is the core software component that manages hardware and software resources in a computer. It provides an interface between the user and the computer hardware, allowing applications to run and access system resources like memory, processors, storage, and input/output devices. Examples of OSs include: • Windows • Linux (Ubuntu, Fedora, etc.) • macOS 🔹 What is Virtualization? Virtualization is the process of creating a virtual version of a computing resource, such as a server, OS, storage device, or network. In the context of operating systems, virtualization allows you to run multiple operating systems on a single physical machine by using virtualization software (also called a hypervisor). There are two main types: • Full Virtualization: Each virtual machine (VM) runs a full OS on top of a hypervisor (e.g., VirtualBox, VMware). • Container-based Virtualization: Uses OS-level virtualization to run multiple isolated apps (e.g., Docker). 🔹 Benefits of Virtualization: • Efficient resource utilization • Isolation between systems • Easy OS testing and deployment • Cost savings on physical hardware • Quick recovery and snapshot capabilities
 
 3.2 Need for a Virtual OS Manager. ⚙️ 2. Need for a Virtual OS Manager While virtualization provides many benefits, managing multiple virtual OS instances can become complex without a proper management system. Users often need to: • Launch and stop virtual machines • Allocate or change resources like RAM and CPU • Monitor performance and usage • Switch between different OS environments • Maintain configuration consistency This becomes tedious when using tools like VirtualBox or Docker via command line or basic GUIs. There is a clear need for a centralized solution that: • Simplifies these operations • Provides a user-friendly interface • Automates frequent tasks • Offers visibility into system performance and health 🧩 Problems Faced Without a Manager: • Manual setup and repetitive configurations • Difficulty in tracking running VMs and their usage • Limited automation in VM lifecycle management • Inconsistencies across development/testing environments Thus, a Virtual OS Manager is required to address these challenges and provide a seamless experience in managing virtual environments efficiently.
@@ -25,6 +33,7 @@ Automate the creation, deletion, and modification of virtual OS instances.
 Support multiple operating systems including various Linux distributions and Windows (as per underlying hypervisor support).
 Monitor system resources used by each virtual machine in real time.
 Improve user experience with a clean and intuitive graphical or command-line interface. 📌 Scope: • The Virtual OS Manager will support the following functionalities: o Creating and configuring VMs or containers o Starting, stopping, pausing, and restarting virtual OS instances o Displaying resource usage (CPU, memory, disk) o Storing VM metadata (like name, OS type, resource limits) • Integration with commonly used hypervisors (e.g., VirtualBox, KVM, Docker) • Optional user authentication and access control for multi-user environments ❌ Out of Scope: • Not focused on developing a new hypervisor or OS. • No advanced network emulation or enterprise-level orchestration. • Limited support for cross-host VM migration or clustering.
+
 Chapter 4. Literature Review 4.1 Summary of existing virtualization technologies (e.g., VMware, VirtualBox, Docker). 🧩 1. Summary of Existing Virtualization Technologies Over the years, several virtualization technologies have emerged, each with unique architectures, capabilities, and use cases. Here’s a summary of the most popular ones:
 
 🔹 1.1 VMware • Type: Full Virtualization • Products: VMware Workstation (desktop), VMware ESXi (server), VMware vSphere (enterprise) • Platform Support: Windows, Linux • Features: o Stable and high-performance virtualization o Snapshots, cloning, and VM migration o Enterprise-level security and networking tools • Use Cases: o Enterprise environments, server consolidation, testing
